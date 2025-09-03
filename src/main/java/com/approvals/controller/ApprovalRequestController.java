@@ -32,6 +32,7 @@ public class ApprovalRequestController {
         request.setRequester(dto.getRequester());
         request.setApprover(dto.getApprover());
         request.setType(dto.getType());
+        request.setCurrentState(dto.getCurrentState());
 
         ApprovalRequest saved = service.save(request);
         return ResponseEntity.ok(saved);

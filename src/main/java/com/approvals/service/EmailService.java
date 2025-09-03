@@ -13,6 +13,7 @@ public class EmailService {
 
     public void sendApprovalNotification(String to, String requester, String description) {
         SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom("mpmsebastian1720@gmail.com"); //correo verificado
         message.setTo(to);
         message.setSubject("Nueva solicitud pendiente de aprobación");
         message.setText("Hola,\n\nTienes una nueva solicitud pendiente:\n\n" +

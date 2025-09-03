@@ -24,6 +24,7 @@ public class RequestDto {
     @NotNull
     private RequestType type;
     
+    @NotNull
     private ApprovalState currentState;
     
     public RequestDto(Long id, String title, String requester, String description, String approver, RequestType type, ApprovalState currentState) {

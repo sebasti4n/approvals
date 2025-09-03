@@ -31,7 +31,7 @@ public class SecurityConfig {
         .authorizeHttpRequests(auth -> auth
             .requestMatchers("/api/auth/**").permitAll()
             .requestMatchers("/api/home/**").hasAnyRole("SOLICITANTE", "RESPONSABLE")
-            .requestMatchers("/api/approvals/**").hasRole("RESPONSABLE")
+            .requestMatchers("/api/approvals/**").hasAnyRole("RESPONSABLE", "SOLICITANTE")
             .anyRequest().authenticated()
         )
         .httpBasic(withDefaults -> {}) 
